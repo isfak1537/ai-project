@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>5x5 Tic-Tac-Toe (Minimax AI)</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    /* Purple Back Button */
+    .back-button {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background-color: #b400ff;
+      color: #fff;
+      text-decoration: none;
+      padding: 8px 14px;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 500;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      z-index: 999;
+    }
+
+    .back-button:hover {
+      background-color: #9900d1;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Back Button -->
+  <a href="../../index.html" class="back-button">← Back</a>
+
+  <div class="container">
+    <h1>5×5 Tic-Tac-Toe</h1>
+
+    <div class="difficulty-controls">
+      <select id="difficulty">
+        <option value="easy">Easy</option>
+        <option value="medium" selected>Medium</option>
+        <option value="hard">Hard</option>
+      </select>
+      <button id="reset">New Game</button>
+      <button id="theme-toggle">🌙 Dark Mode</button>
+    </div>
+
+    <div class="scoreboard">
+      <div class="score-box">
+        <span class="score-label">You (X):</span>
+        <span id="wins">0</span>
+      </div>
+      <div class="score-box">
+        <span class="score-label">AI (O):</span>
+        <span id="losses">0</span>
+      </div>
+      <div class="score-box">
+        <span class="score-label">Draws:</span>
+        <span id="draws">0</span>
+      </div>
+    </div>
+
+    <div class="board" id="board"></div>
+    <div class="status" id="status">Your turn (X)</div>
+    <div class="loading" id="loading">AI thinking...</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

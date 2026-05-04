@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Welcome | Tic Tac Toe AI</title>
+
+  <!-- Google Font: Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      height: 100vh;
+      width: 100vw;
+      background: url('image/bg.jpg') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #ffffff;
+    }
+
+    .container {
+      backdrop-filter: blur(12px);
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+      padding: 40px;
+      text-align: center;
+      max-width: 90%;
+      width: 420px;
+    }
+
+    h1 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      color: #ffffff;
+      font-weight: 600;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+    }
+
+    .team {
+      font-size: 16px;
+      line-height: 1.8;
+      text-align: left;
+      margin-bottom: 30px;
+      padding: 15px;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.15);
+      color: #f1f1f1;
+    }
+
+    .team strong {
+      display: block;
+      text-align: center;
+      font-size: 18px;
+      margin-bottom: 12px;
+      font-weight: 600;
+      color: #ffffff;
+    }
+
+    label {
+      font-size: 16px;
+      display: block;
+      margin-bottom: 10px;
+      color: #ffffff;
+    }
+
+    select, button {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      margin-bottom: 15px;
+      border-radius: 6px;
+      border: none;
+      outline: none;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    select {
+      background: rgba(255, 255, 255, 0.95);
+      color: #222;
+    }
+
+    button {
+      background-color: #b400ff; /* Purple from image */
+      color: #fff;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    button:hover {
+      background-color: #9900d1;
+      transform: scale(1.03);
+    }
+
+    @media screen and (max-width: 600px) {
+      h1 {
+        font-size: 26px;
+      }
+
+      .team {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Welcome to Tic Tac Toe AI</h1>
+
+    <div class="team">
+      <strong>Team Members:</strong>
+      0242220005101537 – Md. Isfak<br>
+      0242220005101539 – Md. Mohsin<br>
+      0242220005101503 – Nabil Rahber<br>
+      0242220005101055 – Md. Kamrul 
+    </div>
+
+    <label for="gameSelect">Choose Your Game Mode:</label>
+    <select id="gameSelect">
+      <option value="" disabled selected>Select Game Board (e.g., 3x3 or 5x5)</option>
+      <option value="Ai 3x3/frontend/index.html">3 × 3 Board</option>
+      <option value="Ai 5x5/frontend/index.html">5 × 5 Board</option>
+    </select>
+
+    <button onclick="goToGame()">Start Game</button>
+  </div>
+
+  <script>
+    function goToGame() {
+      const selected = document.getElementById('gameSelect').value;
+      if (selected) {
+        window.location.href = selected;
+      } else {
+        alert("Please select a game mode.");
+      }
+    }
+  </script>
+
+</body>
+</html>
